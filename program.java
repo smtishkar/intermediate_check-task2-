@@ -7,6 +7,7 @@ import java.util.Queue;
 import java.util.Random;
 import java.util.UUID;
 
+
 /**
  * program
  */
@@ -15,7 +16,7 @@ public class program {
     static final int numberofToys = 10;
     public static ArrayList<ToysList> initialListOfToys = new ArrayList<>();
     public static ArrayList<ToysList> newlistOfToys = new ArrayList<>();
-    public static ArrayList<ToysList> lotteryList = new ArrayList<>();
+    public static Queue<ToysList> queue = new LinkedList<>();
 
     public static void main(String[] args) {
 
@@ -27,14 +28,20 @@ public class program {
         newlistOfToys = clonListOfToys(initialListOfToys);
         newlistOfToys.forEach(n -> System.out.println(n.toString()));
 
-        Random random = new Random();
-        int x = random.nextInt(100);
 
-        for (ToysList toy : newlistOfToys) {
-            x = random.nextInt(100);
-            int newChance = toy.getChance() * x;
-            toy.setChance(newChance);
-        }
+        //делаем рандомайзер
+        // Random random = new Random();
+        // int x = random.nextInt(100);
+
+        // for (ToysList toy : newlistOfToys) {
+        //     x = random.nextInt(100);
+        //     int newChance = toy.getChance() * x;
+        //     toy.setChance(newChance);
+        // }
+
+        Randomizer.chanceCalculation(newlistOfToys);
+
+
 
 
         System.out.println("Тут новые данные");
@@ -44,32 +51,30 @@ public class program {
         sortList(newlistOfToys);
         newlistOfToys.forEach(n -> System.out.println(n.toString()));
 
-
-        Queue<ToysList> queue = new LinkedList<>();
-        // queue.add(toys);
-        // System.out.println(queue);
-        // System.out.println(listOfToys.get(5));
-        // queue.add(listOfToys.get(0));
-        // queue.add(listOfToys.get(1));
-        // System.out.println(queue);
-        // System.out.println(queue.element());
-
-        for (ToysList toys : newlistOfToys) {
-            queue.add(toys);
-        }
-
-        System.out.println("Начинаем розыгрыш");
-
-        // System.out.println(queue);
-
-        for (int i = 0; i < numberofToys; i++) {
-            System.out.println("Участнику достается: " + queue.element());
-            queue.remove();
-            if (queue.isEmpty())
-                System.out.println("Игрушек больше нет");
-        }
-
+        Lottery.queueCreation(queue, newlistOfToys);
         System.out.println(queue);
+
+        Lottery.lotteryProgress(queue);
+        System.out.println(queue);
+
+        //  Очередь создание и розыгрышь
+        // Queue<ToysList> queue = new LinkedList<>();
+        // for (ToysList toys : newlistOfToys) {
+        //     queue.add(toys);
+        // }
+        // System.out.println("Начинаем розыгрыш");
+        // for (int i = 0; i < numberofToys; i++) {
+        //     System.out.println("Участнику достается: " + queue.element());
+        //     queue.remove();
+        //     if (queue.isEmpty())
+        //         System.out.println("Игрушек больше нет");
+        // }
+        // System.out.println(queue);
+
+
+
+
+
 
     }
 
@@ -109,7 +114,5 @@ public class program {
             }
         });
     }
-
-    // public static chanceChooser
 
 }
