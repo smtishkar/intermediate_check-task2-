@@ -39,7 +39,12 @@ public class program {
         //     toy.setChance(newChance);
         // }
 
-        Randomizer.chanceCalculation(newlistOfToys);
+        System.out.println("Тут взвешенное значение");
+        int ttlProbab = Randomizer.ttlProbabilityCalculation(initialListOfToys);
+            System.out.println(ttlProbab);
+        Randomizer.weigedProbabilityCalculation(initialListOfToys, ttlProbab);
+        System.out.println(initialListOfToys);
+        // Randomizer.chanceCalculation(newlistOfToys);
 
 
 
@@ -47,9 +52,9 @@ public class program {
         System.out.println("Тут новые данные");
         newlistOfToys.forEach(n -> System.out.println(n.toString()));
 
-        System.out.println();
-        sortList(newlistOfToys);
-        newlistOfToys.forEach(n -> System.out.println(n.toString()));
+        // System.out.println();
+        // sortList(newlistOfToys);
+        // newlistOfToys.forEach(n -> System.out.println(n.toString()));
 
         Lottery.queueCreation(queue, newlistOfToys);
         System.out.println(queue);
@@ -105,14 +110,14 @@ public class program {
         }
     }
 
-    static void sortList(ArrayList<ToysList> toys) {
-        toys.sort(new Comparator<ToysList>() {
+    // static void sortList(ArrayList<ToysList> toys) {
+    //     toys.sort(new Comparator<ToysList>() {
 
-            @Override
-            public int compare(ToysList o1, ToysList o2) {
-                return o2.getChance() - o1.getChance();
-            }
-        });
-    }
+    //         @Override
+    //         public int compare(ToysList o1, ToysList o2) {
+    //             return o2.getChance(). - o1.getChance();
+    //         }
+    //     });
+    // }
 
 }

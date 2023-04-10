@@ -3,7 +3,7 @@ public class ToysList {
     public static Object toy1;
     public int id;
     public String name;
-    public int chance;
+    public float chance;
 
     public ToysList (int id, String name, int chance) {
             this.id = id;
@@ -18,12 +18,12 @@ public class ToysList {
         return this.id + " " + this.name + " " + this.chance;
     }
 
-    public int getChance(){
+    public float getChance(){
         return chance;
     }
 
 
-    public void setChance(int chance){
+    public void setChance(float chance){
         this.chance = chance;
     }
   
