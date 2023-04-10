@@ -23,14 +23,15 @@ public class Lottery {
 
     }
 
+    // static void newsortList(ArrayList<ToysList> toys) {
+    // Collections.sort(toys, new Comparator<Object>() {
+    // @Override
+    // public int compare(Object o1, Object o2) {
+    // return Float.compare(o1.getChance(), o2.getChance());
+    // }
+    // });
 
-//     static void newsortList(ArrayList<ToysList> toys) {
-//         Collections.sort(toys, new Comparator<Object>() {
-//         @Override
-//         public int compare(Object o1, Object o2) {
-//         return Float.compare(o1.getChance(), o2.getChance());
-//     }
-// });
 
+    
 
 }

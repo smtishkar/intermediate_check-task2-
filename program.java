@@ -1,3 +1,4 @@
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -30,44 +31,73 @@ public class program {
         newlistOfToys = clonListOfToys(initialListOfToys);
         newlistOfToys.forEach(n -> System.out.println(n.toString()));
 
-        // делаем рандомайзер
-        // Random random = new Random();
-        // int x = random.nextInt(100);
-
-        // for (ToysList toy : newlistOfToys) {
-        // x = random.nextInt(100);
-        // int newChance = toy.getChance() * x;
-        // toy.setChance(newChance);
-        // }
-
-        System.out.println();
-        System.out.println("Общее значение всех вероятностей");
-        int ttlProbab = Randomizer.ttlProbabilityCalculation(initialListOfToys);
-        System.out.println(ttlProbab);
-
-        System.out.println();
-        System.out.println("Клонированный список с взвешенными вероятностями");
-        Randomizer.weigedProbabilityCalculation(newlistOfToys, ttlProbab);
-        newlistOfToys.forEach(n -> System.out.println(n.toString()));
-        // Randomizer.chanceCalculation(newlistOfToys);
-
-
-
-        newsortList(newlistOfToys);
-
-        System.out.println();
-        System.out.println("Отсортированный список");
-        newlistOfToys.forEach(n -> System.out.println(n.toString()));
-        newlistOfToys.forEach(n -> System.out.println(n.toString()));
-        // System.out.println();
-        // sortList(newlistOfToys);
-        // newlistOfToys.forEach(n -> System.out.println(n.toString()));
 
         Lottery.queueCreation(queue, newlistOfToys);
         System.out.println(queue);
 
-        Lottery.lotteryProgress(queue);
-        System.out.println(queue);
+        // System.out.println("Это иигрушка");
+        // System.out.println(Randomizer.chooseChance(newlistOfToys));
+        // System.out.println(Randomizer.chooseChance(newlistOfToys));
+
+        
+        ToysList toy = Randomizer.chooseChance(newlistOfToys);
+        System.out.println(toy);
+        // PrintWriter writer = new PrintWriter("the-file-name.txt", "UTF-8");
+        // writer.println(toy.toString());   
+        
+        // newlistOfToys.remove(Randomizer.chooseChance(newlistOfToys));
+  
+        // System.out.println(newlistOfToys);
+
+        for (int i = 0; i < numberofToys; i++) {
+            
+            ToysList item = (Randomizer.chooseChance(newlistOfToys));  
+            System.out.println("Участнику достается: " + item);
+            newlistOfToys.remove(item);
+            
+
+            // System.out.println(newlistOfToys);
+            if (newlistOfToys.isEmpty())
+                System.out.println("Розыгрыш окончен, игрушек больше нет");   
+        }
+
+        //Берем 
+        // for (ToysList toy : newlistOfToys) {
+        //     queue.add(Randomizer.chooseChance(newlistOfToys));     
+        // }
+        // System.out.println();
+        // System.out.println("Новая очередь");  
+        // System.out.println(queue);
+        
+
+        // System.out.println();
+        // System.out.println("Общее значение всех вероятностей");
+        // int ttlProbab = Randomizer.ttlProbabilityCalculation(initialListOfToys);
+        // System.out.println(ttlProbab);
+
+        // System.out.println();
+        // System.out.println("Клонированный список с взвешенными вероятностями");
+        // Randomizer.weigedProbabilityCalculation(newlistOfToys, ttlProbab);
+        // newlistOfToys.forEach(n -> System.out.println(n.toString()));
+        // // Randomizer.chanceCalculation(newlistOfToys);
+
+
+
+        // newsortList(newlistOfToys);
+
+        // System.out.println();
+        // System.out.println("Отсортированный список");
+        // newlistOfToys.forEach(n -> System.out.println(n.toString()));
+        // newlistOfToys.forEach(n -> System.out.println(n.toString()));
+        // System.out.println();
+        // sortList(newlistOfToys);
+        // newlistOfToys.forEach(n -> System.out.println(n.toString()));
+
+        // Lottery.queueCreation(queue, newlistOfToys);
+        // System.out.println(queue);
+
+        // Lottery.lotteryProgress(queue);
+        // System.out.println(queue);
 
         // Очередь создание и розыгрышь
         // Queue<ToysList> queue = new LinkedList<>();
@@ -131,4 +161,9 @@ public class program {
     });
 
 }
+
+
+
+
+
 }
