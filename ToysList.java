@@ -1,11 +1,11 @@
 public class ToysList {
 
     public static Object toy1;
-    public int id;
+    public String id;
     public String name;
     public float chance;
 
-    public ToysList (int id, String name, int chance) {
+    public ToysList (String id, String name, int chance) {
             this.id = id;
             this.name = name;
             this.chance = chance;
@@ -15,7 +15,8 @@ public class ToysList {
         
     @Override
     public String toString(){
-        return this.id + " " + this.name + " " + this.chance;
+        // return "ID: " + this.id + " ; Name: %10d" + this.name + " ; Chance " + this.chance;
+        return String.format("ID: %10s | Name: %15s | Chance: %f" ,id, name, chance);
     }
 
     public float getChance(){
@@ -35,12 +36,12 @@ public class ToysList {
     public void setName(String name) {
         this.name = name;
     }
-    public int getId() {
+    public String getId() {
         return id;
     }
 
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

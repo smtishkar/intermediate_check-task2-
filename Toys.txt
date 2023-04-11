@@ -1,1 +1,12 @@
-ffffffffffffffff
+******************
+// Начало лотереи // Tue Apr 11 19:51:03 MSK 2023
+ID:   2c7ed221 | Name:  Мягкая игрушка | Chance: 20,000000
+ID:   5eeb5bb6 | Name:  Мягкая игрушка | Chance: 20,000000
+ID:   1be60303 | Name:         Машинка | Chance: 30,000000
+ID:   1395d06f | Name:         Машинка | Chance: 30,000000
+ID:   007ffd0e | Name:     Конструктор | Chance: 40,000000
+ID:   6769b515 | Name:     Конструктор | Chance: 40,000000
+ID:   26872323 | Name:           Робот | Chance: 50,000000
+ID:   0174de77 | Name:           Робот | Chance: 50,000000
+ID:   1be4fd8f | Name:     Конструктор | Chance: 40,000000
+ID:   ad4c242c | Name:  Мягкая игрушка | Chance: 20,000000

@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Random;
 import java.util.UUID;
+import java.util.concurrent.locks.LockSupport;
+
 
 /**
  * program
@@ -32,16 +34,24 @@ public class program {
         newlistOfToys.forEach(n -> System.out.println(n.toString()));
 
 
-        Lottery.queueCreation(queue, newlistOfToys);
-        System.out.println(queue);
+        // Lottery.queueCreation(queue, newlistOfToys);
+        // System.out.println(queue);
 
         // System.out.println("Это иигрушка");
         // System.out.println(Randomizer.chooseChance(newlistOfToys));
         // System.out.println(Randomizer.chooseChance(newlistOfToys));
 
         
-        ToysList toy = Randomizer.chooseChance(newlistOfToys);
-        System.out.println(toy);
+
+
+        // ToysList toy = Randomizer.chooseChance(newlistOfToys);
+        // System.out.println(toy);
+
+
+
+
+
+
         // PrintWriter writer = new PrintWriter("the-file-name.txt", "UTF-8");
         // writer.println(toy.toString());   
         
@@ -49,17 +59,33 @@ public class program {
   
         // System.out.println(newlistOfToys);
 
-        for (int i = 0; i < numberofToys; i++) {
-            
-            ToysList item = (Randomizer.chooseChance(newlistOfToys));  
-            System.out.println("Участнику достается: " + item);
-            newlistOfToys.remove(item);
-            
+        System.out.println();
+        System.out.println("Начало розыгрыша");
+        Logger.logtoFileStartLottery();
 
-            // System.out.println(newlistOfToys);
-            if (newlistOfToys.isEmpty())
-                System.out.println("Розыгрыш окончен, игрушек больше нет");   
-        }
+
+
+
+
+        Lottery.lotteryProcess(numberofToys, newlistOfToys);
+
+
+
+        // for (int i = 0; i < numberofToys; i++) {
+        //     ToysList item = (Randomizer.chooseChance(newlistOfToys)); 
+        //     Logger.logToFile(item.toString());; 
+        //     System.out.println("Выпала игрушка --> " + item);
+        //     newlistOfToys.remove(item);
+        //     if (newlistOfToys.isEmpty())
+        //         System.out.println("Розыгрыш окончен, игрушек больше нет");   
+        // }
+
+
+
+
+
+
+
 
         //Берем 
         // for (ToysList toy : newlistOfToys) {
@@ -125,16 +151,16 @@ public class program {
         for (int i = 0; i < numberofToys; i++) {
             switch (new Random().nextInt(4)) {
                 case 0:
-                    listOfToys.add(new ToysList(1, "Машинка", 30));
+                    listOfToys.add(new ToysList(IDGenerator.IDGenerator(), "Машинка", 30));
                     break;
                 case 1:
-                    listOfToys.add(new ToysList(2, "Конструктор", 40));
+                    listOfToys.add(new ToysList(IDGenerator.IDGenerator(), "Конструктор", 40));
                     break;
                 case 2:
-                    listOfToys.add(new ToysList(3, "Робот", 50));
+                    listOfToys.add(new ToysList(IDGenerator.IDGenerator(), "Робот", 50));
                     break;
                 case 3:
-                    listOfToys.add(new ToysList(4, "Мягкая игрушка", 20));
+                    listOfToys.add(new ToysList(IDGenerator.IDGenerator(), "Мягкая игрушка", 20));
                     break;
                 default:
                     break;
