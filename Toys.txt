@@ -1,12 +1,24 @@
 ******************
-// Начало лотереи // Tue Apr 11 19:51:03 MSK 2023
-ID:   2c7ed221 | Name:  Мягкая игрушка | Chance: 20,000000
-ID:   5eeb5bb6 | Name:  Мягкая игрушка | Chance: 20,000000
-ID:   1be60303 | Name:         Машинка | Chance: 30,000000
-ID:   1395d06f | Name:         Машинка | Chance: 30,000000
-ID:   007ffd0e | Name:     Конструктор | Chance: 40,000000
-ID:   6769b515 | Name:     Конструктор | Chance: 40,000000
-ID:   26872323 | Name:           Робот | Chance: 50,000000
-ID:   0174de77 | Name:           Робот | Chance: 50,000000
-ID:   1be4fd8f | Name:     Конструктор | Chance: 40,000000
-ID:   ad4c242c | Name:  Мягкая игрушка | Chance: 20,000000
+// Начало лотереи // Tue Apr 11 20:19:55 MSK 2023
+ID:   c142d60c | Name:     Конструктор | Chance: 40,000000
+ID:   28af3dd2 | Name:     Конструктор | Chance: 40,000000
+ID:   2f09f816 | Name:     Конструктор | Chance: 40,000000
+ID:   ce9281b4 | Name:           Робот | Chance: 50,000000
+ID:   53f081d5 | Name:     Конструктор | Chance: 40,000000
+ID:   7f65f503 | Name:           Робот | Chance: 50,000000
+ID:   4b2ad4aa | Name:     Конструктор | Chance: 40,000000
+ID:   2680f43f | Name:  Мягкая игрушка | Chance: 20,000000
+ID:   6e0a6320 | Name:         Машинка | Chance: 30,000000
+ID:   51149d07 | Name:           Робот | Chance: 50,000000
+******************
+// Начало лотереи // Tue Apr 11 20:23:46 MSK 2023
+ID:   bd6f06b0 | Name:     Конструктор | Chance: 40,000000
+ID:   93e43766 | Name:           Робот | Chance: 50,000000
+ID:   1fa9e664 | Name:           Робот | Chance: 50,000000
+ID:   e3ba2984 | Name:         Машинка | Chance: 30,000000
+ID:   eab84a37 | Name:         Машинка | Chance: 30,000000
+ID:   c79a2b46 | Name:         Машинка | Chance: 30,000000
+ID:   b711586a | Name:     Конструктор | Chance: 40,000000
+ID:   6ef1c8d8 | Name:           Робот | Chance: 50,000000
+ID:   42e42b2d | Name:     Конструктор | Chance: 40,000000
+ID:   65091f72 | Name:  Мягкая игрушка | Chance: 20,000000
